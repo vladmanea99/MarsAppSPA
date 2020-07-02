@@ -8,7 +8,7 @@ function BasicComponent(props: BasicInterface){
         <h1 className = 'basicTitle'>{props.title}</h1>
         <p className = 'basicP'>{props.p1}</p>
         <p className = 'basicP'>{props.p2}</p>
-        <img src = {props.img} className = 'App-logo'/>
+        <img src = {props.img} className = 'App-logo' alt = 'Nasa Logo'/>
     </div>)
 }
 

@@ -1,10 +1,16 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 
 function ClickCountComponent(){
-    const [clickCount, setClickCount] = useState(0);
+
+    const [clickCount, setClickCount] = useState(localStorage.getItem("clicks") || 0);
+
+    useEffect(() => {
+        localStorage.setItem("clicks", clickCount.toString());
+    }, [clickCount])
+
 
     function incrementCount(){
-        setClickCount(clickCount + 1);
+        setClickCount(+clickCount + 1);
     }
 
     return(
